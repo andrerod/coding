@@ -37,4 +37,4 @@ def solution():
 
 
 if __name__ == "__main__":
-    print(solution())  # 30
+    print(solution())  # 31
