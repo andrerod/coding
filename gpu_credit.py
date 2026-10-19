@@ -54,13 +54,12 @@ class GPUCreditCalculator:
 
         # 1. First pass: Verify if there is enough total balance across available grants
         available_balance = 0.0
-        valid_grants = []
 
         for g in self.active_grants:
             if g.start_time <= timestamp:
                 available_balance += g.amount
-                valid_grants.append(g)
 
+        print(f"available balance is {available_balance}")
         if available_balance < amount:
             return False  # Insufficient credits: Transaction fails atomically
 
